@@ -106,8 +106,7 @@ class db():
     # Función principal de la base de datos
     def main(self):
         print("Actualizando base de datos")
-        print(self.preguntarBD("pregunta_1"))
-        # self.actualizarDB()
+        self.actualizarDB()
 
 if __name__ == "__main__":
     db_instance = db()
