@@ -13,7 +13,7 @@ from scripts.preguntas import pregunta_5 as pregunta5
 class db():
     # Conexión a la base de datos
     conn = psycopg2.connect(
-        database="tendenciasAIS",
+        database="prueba",
         user="postgres",
         password="admin",
         host="127.0.0.1",
@@ -48,8 +48,11 @@ class db():
 
     # Función para actualizar la base de datos con las preguntas 1, 3 y 4
     def actualizarDBPreguntas_25(self, cur, insert25):
+        # Creamos un diccionario con los datos de la tabla
+        preguntas = ["pregunta_2", "pregunta_5"]
         # Cargamos los datos en la base de datos
-        insert25.crearDataFrame(cur)
+        for pregunta in preguntas:
+            insert25.crearDataFrame(pregunta, cur)
 
     # Función para actualizar la base de datos con las preguntas 1, 3 y 4
     def actualizarDBPreguntas_134(self, cur, insert134):
