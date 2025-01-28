@@ -13,11 +13,11 @@ from scripts.preguntas import pregunta_5 as pregunta5
 class db():
     # Conexión a la base de datos
     conn = psycopg2.connect(
-        database="prueba",
-        user="postgres",
-        password="admin",
-        host="127.0.0.1",
-        port="5432"
+        database="tendenciasAIS", #Default db name
+        user="postgres", #Default pgAdmin user
+        password="admin", #Default pgAdmin password
+        host="127.0.0.1", #Localhost
+        port="5432" #Default postgres port
     )
 
     # Función que chekea la conexión a la base de datos
